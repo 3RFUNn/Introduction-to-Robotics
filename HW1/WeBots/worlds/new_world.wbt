@@ -1,0 +1,59 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.6024653199378468 0.5235177242093237 0.6024655431731165 2.1770290652546676
+  position 0.35797659629624107 0.0026695141329800905 2.469789367310751
+  follow "e-puck"
+  followType "Pan and Tilt Shot"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  rotation 1 0 0 4.692820414042842e-06
+  floorSize 2 2
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallHeight 0.15
+}
+E-puck {
+  translation 0.319854 0.178341 -6.29544e-05
+  rotation -3.7436799999583397e-06 2.8707599999680536e-06 -0.9999999999888718 -1.3089953071795861
+  controller "MyController"
+  supervisor TRUE
+  turretSlot [
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}
+Solid {
+  translation -0.209 -0.249 0.001
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "./mark.png"
+          ]
+        }
+      }
+      geometry Plane {
+        size 0.1 0.1
+      }
+    }
+  ]
+}
